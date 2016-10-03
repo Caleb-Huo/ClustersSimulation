@@ -146,7 +146,7 @@ generateS <- function(seed=15213,S=2,k=3,meanSamplesPerK,nModule,meanGenesPerMod
 	  for(g in 1:length(agroup)){
 		  bgroup <- agroup[[g]]
 		  relinkIndex <- rbinom(length(bgroup),1,groupProb) == 0
-		  bgroup[relinkIndex] = sample(noiseIndex, sum(relinkIndex), replace=TRUE)
+		  bgroup[relinkIndex] = sample(noiseIndex, sum(relinkIndex), replace=FALSE)
 		  agroup[[g]] <- bgroup
 	  }
 	  group[[s]] <- agroup
