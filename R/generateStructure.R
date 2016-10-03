@@ -32,7 +32,6 @@ generateStructure <- function(anModule,Gmean,Gsd,aSindex,sigma1,sigma2,rho = 0.5
   ## expand the gene template for the sample direction
   
   amuLayer1_fold <- t(apply(amuLayer1,1,function(x) (x-min(x))*fold + min(x) ))
-  print(amuLayer1_fold)
   for(i in 1:nrow(amuLayer1)){
     for(j in 1:aSubtypes){
       tmpIndex = aSindex[[j]]

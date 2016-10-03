@@ -31,15 +31,8 @@
 ##'                   nconfounder=4,nrModule=20,rMeanSubtypes=3,diffmu=1,fold=c(1,1),
 ##' 				  rho = 0.5,df.prior = 100,groupProb=1)
 ##' #
-##' gapStat = gapStatistics(Sdata$d, K = 3,alpha = 0.5, group = Sdata$groupUnion)
-##' iRes <- ISKmeans(Sdata$d,K=3,group=Sdata$groupUnion,gamma=0.15,alpha=0.05)
-##'
-##' iRes$Cs
-##' iRes$ws
 ##' Sdata$subPredictGeneUnion
-##' table(Sdata$subPredictGeneUnion, iRes$ws!=0)
 ##' sum(Sdata$subPredictGeneUnion)
-##' sum(iRes$ws!=0)
 generateS <- function(seed=15213,S=2,k=3,meanSamplesPerK,nModule,meanGenesPerModule=20,
                       Gmean=9,Gsd=2,sigma1,sigma2,sigma3,G0,
                       nconfounder,nrModule,rMeanSubtypes,diffmu,fold=rep(1,S),
